@@ -25,27 +25,28 @@ public class StudentService {
 		return students;
 	}
 	
-	public Student getStudent(int id) {
-		Student student=  students.stream().filter(s -> s.getId() == id ).findFirst().get();
-		return student;
-	}
-
-	
-	  public void addStudent(Student student) {
-	  System.out.println("controllers add student"); 
-	  students.add(student); 
-	  }
+	/*
+	 * public Student getStudent(int id) { Student student=
+	 * students.stream().filter(s -> s.getId() == id ).findFirst().get(); return
+	 * student; }
+	 * 
+	 * 
+	 * public void addStudent(Student student) {
+	 * System.out.println("controllers add student"); students.add(student); }
+	 */
 	 
 
-	/*
-	 * public void updateStudent(Student student, int id) { for(int i = 0; i<
-	 * students.size(); i++) { Student s = students.get(0); if(s.getId() == id) {
-	 * students.set(id, student); return; } } }
-	 */
+	
+		/*
+		 * public void updateStudent(Student student, int id) { for(int i = 0; i<
+		 * students.size(); i++) { Student s = students.get(0); if(s.getId() == id) {
+		 * students.set(id, student); return; } } }
+		 */
 
-	/*
-	 * public void removeStudent(int id) { students.removeIf(s -> s.getId() == id);
-	 * }
-	 */
+	
+	  public void removeStudent(int id) {
+		  students.removeIf(s -> s.getId() == id);
+	  }
+	 
 
 }
